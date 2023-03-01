@@ -1,0 +1,132 @@
+.sidebarContainer{
+    border-bottom: 1px solid rgba(99, 99, 99, 0.2);
+    border-right: 1px solid rgba(99, 99, 99, 0.2);
+    height: 100vh;
+    width: 250px;
+}
+
+.sidebarContainer.expand{
+    width: 60px;
+}
+
+.logoSection{
+    height: 60px;
+    border-bottom: 1px solid rgba(99, 99, 99, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.LogoBox{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon{
+    margin: 0 7px;
+}
+
+.mainBoard{
+    margin: 5px;
+}
+
+.boards{
+    margin: 25px 0;
+}
+
+.mainBoard p{
+    font-size: 10px;
+    color: #7b8190;
+    font-weight: bold;
+    margin: 7px 10px;
+}
+
+.boardBox{
+    position: relative;
+}
+
+.board{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 10px 13px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #7b8190;
+    position: relative;
+}
+
+.board:hover{
+    background-color: #F2F3FE;
+    color: #73BDEC;
+}
+
+.boardName{
+    display: flex;
+    align-items: center;
+}
+
+.visible{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.boardRight{
+    font-size: 10px;
+    background-color: #ebe9e9;
+    color: #7a7b7e;
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+
+.shrink{
+    background-color: #F2F3FE;
+    position: absolute;
+    left: 90%;
+    width: 150px;
+    padding: 12px 0px 12px 20px;
+    display: none;
+}
+
+.board:hover .show{
+    display: block;
+}
+
+.boardHide{
+    transform: scale(0);
+    height: 0;
+}
+
+.boardShow{
+    animation: show 0.1s ease-in;
+}
+
+@keyframes show{
+    0%{
+        transform: scale(0);
+        height: 0%;
+    }100%{
+        transform: scale(1);
+        height: 100%;
+    }
+}
+
+.boardDrop li{
+    padding: 7px 10px;
+    list-style-type: circle;
+    margin-left: 1.5em;
+    color: #7a7b7e;
+    cursor: pointer;
+}
+
+.boardDrop li:hover{
+    color: black;
+}
+
+
+

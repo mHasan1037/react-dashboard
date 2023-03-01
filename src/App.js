@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+//https://dashonic-v-light.react.pichforest.com/sales
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import './app.css'
+import { useState } from "react";
+import NavExpendHook from "./hooks/NavExpandHook";
 
 function App() {
+  const [sidebarSize, setSidebarSize] = useState(250)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+       <NavExpendHook.Provider value={{sidebarSize, setSidebarSize}}>
+          <Routes>
+              <Route path="/">
+                  <Route index element={<Home /> } />
+              </Route>
+          </Routes>
+       </NavExpendHook.Provider>
+    </BrowserRouter>
   );
 }
 
