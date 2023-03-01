@@ -13,9 +13,7 @@ function App() {
     <BrowserRouter>
        <NavExpendHook.Provider value={{sidebarSize, setSidebarSize}}>
           <Routes>
-              <Route path="/">
-                  <Route index element={<Home /> } />
-              </Route>
+              <Route path="/" element={<Home /> } />
           </Routes>
        </NavExpendHook.Provider>
     </BrowserRouter>
