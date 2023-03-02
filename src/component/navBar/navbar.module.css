@@ -3,4 +3,118 @@
     border-bottom: 1px solid rgba(99, 99, 99, 0.2);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navLeft{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.leftOptions{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0px 10px;
+    cursor: pointer;
+    color: #7b8190;
+    position: relative;
+    z-index: 3;
+}
+
+.leftOptions:hover{
+    color: #73BDEC;
+}
+
+.buttonBox{
+    position: absolute;
+    top: 100%;
+    border: 1px solid rgba(99, 99, 99, 0.2);
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+    cursor: default;
+    background-color: white;
+}
+
+.dropbtn{
+    width: 170px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #7b8190;
+    font-size: 14px;
+}
+
+.dropbtn:hover{
+    background-color: #F2F3FE;
+    color: #73BDEC;
+}
+
+.buttonContainer{
+    position: absolute;
+    top: 100%;
+    border: 1px solid rgba(99, 99, 99, 0.2);
+    display: flex;
+    padding: 5px;
+    background-color: white;
+}
+
+.navRight{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navRightIcon{
+    font-size: 20px;
+    color: #7b8190;
+    cursor: pointer;
+}
+
+.navRightIcon:hover{
+    color: #73BDEC;
+}
+
+.proBox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.proBox:hover .navProfile{
+    border-color: #73BDEC;
+}
+
+.navProfile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #d2d5db;
+}
+
+.navProfileImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.navProName p{
+    color: rgb(36, 36, 36);
+}
+
+.navProName span{
+    color: rgb(85, 85, 85);
+    font-size: 12px;
+}
+
+.proBox:hover span{
+    color: #73BDEC;
 }
