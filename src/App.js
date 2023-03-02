@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
        <NavExpendHook.Provider value={{sidebarSize, setSidebarSize}}>
           <Routes>
-              <Route path="/" element={<Home /> } />
+              <Route path="/react-dashboard" element={<Home /> } />
           </Routes>
        </NavExpendHook.Provider>
     </BrowserRouter>
