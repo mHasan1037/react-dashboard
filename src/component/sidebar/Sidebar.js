@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import style from './sidebar.module.css'
 import { IoLogoJavascript } from 'react-icons/io'
 import { RxHamburgerMenu } from 'react-icons/rx'
@@ -21,6 +21,19 @@ const Sidebar = () => {
         setExpand(!expand)
         setSidebarSize(prev => prev === 250 ? 60 : 250)
     }
+
+    useEffect(()=>{
+        function handleResize(){
+            window.innerWidth < 768 ? setExpand(false) : setExpand(true)
+            expand ? setSidebarSize(60) : setSidebarSize(250)
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return()=>{
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
   return (
     <section className={`${style.sidebarContainer} ${expand ? '' : style.expand}`}>

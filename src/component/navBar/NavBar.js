@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import style from './navbar.module.css'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { AiOutlineSearch, AiOutlineAppstore, AiOutlineBell, AiOutlineSetting } from 'react-icons/ai'
 import dropImg from '../../images/bf.png'
+import NavExpandHook from '../../hooks/NavExpandHook'
 
 const NavBar = () => {
     const [show, setShow] = useState(false)
     const [showTwo, setShowTwo] = useState(false)
+    const {sidebarSize} = useContext(NavExpandHook)
+
     
   return (
     <div className={style.navBarContainer}>
         <div className={style.navLeft}>
-            <div className={style.leftOptions} onClick={()=> setShow(!show)}>
+            <div className={style.leftOptions} onClick={()=> {setShow(!show); setShowTwo(false)}}>
                 Components
                 <MdKeyboardArrowDown />
                 {
@@ -36,14 +39,14 @@ const NavBar = () => {
                 }
             </div>
 
-            <div className={style.leftOptions} onClick={()=> setShowTwo(!showTwo)}>
+            <div className={style.leftOptions} onClick={()=> {setShowTwo(!showTwo); setShow(false)}}>
                 Categories
                 <MdKeyboardArrowDown />
 
                 {
                     showTwo && (
-                        <div className={style.buttonContainer}>
-                    <div>
+                    <div className={style.buttonContainer} style={{left: sidebarSize === 60 ? '60px' : sidebarSize === 250 ? '250px' : ''}}>
+                       <div className={style.CatButtonBox}>
                             <button className={style.dropbtn}>Computers Accessories</button>
                             <button className={style.dropbtn}>Laptops Tablets</button>
                             <button className={style.dropbtn}>Desktop Computers</button>
@@ -53,7 +56,7 @@ const NavBar = () => {
                             <button className={style.dropbtn}>Batteries</button>
                             <button className={style.dropbtn}>Charges Adapters</button>
                         </div>
-                        <div>
+                        <div className={style.CatButtonBox}>
                             <button className={style.dropbtn}>Smartphones & Tablets</button>
                             <button className={style.dropbtn}>Apple iPhone</button>
                             <button className={style.dropbtn}>Android Smartphones</button>
@@ -63,7 +66,7 @@ const NavBar = () => {
                             <button className={style.dropbtn}>Tablets with Keyboard</button>
                             <button className={style.dropbtn}>Charges Adapters</button>
                         </div>
-                        <div>
+                        <div className={style.CatButtonBox}>
                             <button className={style.dropbtn}>Television & Video</button>
                             <button className={style.dropbtn}>TV Sets</button>
                             <button className={style.dropbtn}>Home Theater Systems</button>
@@ -73,7 +76,7 @@ const NavBar = () => {
                             <button className={style.dropbtn}>Projection Screens</button>
                             <button className={style.dropbtn}>Satelite Television</button>
                         </div>
-                        <div>
+                        <div className={style.CatButtonBox}>
                             <button className={style.dropbtn}>Cameras, Photos & Video</button>
                             <button className={style.dropbtn}>Point & Shoot Digital Cameras</button>
                             <button className={style.dropbtn}>DSLR Cameras</button>
@@ -82,8 +85,8 @@ const NavBar = () => {
                             <button className={style.dropbtn}>Camera Lenses</button>
                             <button className={style.dropbtn}>Video Studio</button>
                         </div>
-                        <div>
-                            <img src={dropImg} width={100}/>
+                        <div className={style.dropImgBox}>
+                            <img src={dropImg} style={{width: '200px', height: 'auto'}} />
                         </div>
                     </div>
                     )

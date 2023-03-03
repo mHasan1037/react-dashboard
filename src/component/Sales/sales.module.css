@@ -1,0 +1,29 @@
+.salesContainer{
+    background-color: #F7F8FA;
+    padding: 20px;
+}
+
+.salesHeadline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.salesHeadline h3{
+    font-weight: 300;
+    color: rgb(53, 52, 52);
+}
+
+.headlineRight{
+    display: flex;
+    align-items: center;
+    color: #787a7a;
+    gap: 4px;
+    font-size: 14px;
+}
+
+
+
+.totalContainer{
+    margin-top: 20px;
+}
