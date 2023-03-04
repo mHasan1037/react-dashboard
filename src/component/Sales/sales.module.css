@@ -22,8 +22,196 @@
     font-size: 14px;
 }
 
-
-
 .totalContainer{
     margin-top: 20px;
+}
+
+
+/*
+Sales section.....
+*/
+
+.salesSection{
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.salesLeft{
+    flex: 1;
+}
+
+.salesSt{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FDF5DD;
+    padding: 18px;
+    border-radius: 3px;
+    align-items: center;
+}
+
+.salesNd{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+
+    display: -webkit-flex;
+}
+
+.salesUpgrade{
+    flex: 2;
+    gap: 5px;
+}
+
+.upgradeDes{
+    font-size: 18px;
+    color: #474e55;
+}
+
+.salesUpgrade button{
+    background-color: #0379BB;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.salesUpgrade button:hover{
+    background-color: #026ba8;
+}
+
+.salesImgBox{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.salesImg{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+.reportHeadline{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.secondLeft{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.mainBtn{
+    color: #474e55;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btnOptions{
+    border: 1px solid #dcdddf;
+    margin-top: 5px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.btnOptions button{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.btnOptions button:hover{
+    background-color: rgb(247, 247, 247);
+}
+
+.reportBody{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.reportLeft{
+    flex: 2;
+}
+
+.reportMonths{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reportMonths div{
+    width: fit-content;
+}
+
+.reportMonth{
+    color: #474e55;
+    white-space: nowrap;
+}
+
+.reportMoney{
+    color: #495057;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.reportPer{
+    width: fit-content;
+    display: block;
+    margin: 5px auto 10px;
+    color: #51d28c;
+    background-color: rgba(81,210,140,.1);
+    padding: 5px 10px;
+    border-radius: 5px; 
+    font-size: 13px;
+}
+
+.reportPrev{
+    margin: 25px 0;
+    font-size: 14px;
+    color: #7a848d;
+    word-spacing: 3px;
+}
+
+.reportLeft button{
+    background-color: rgba(116,120,141,.1);
+    border-color: transparent;
+    color: #74788d;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.reportLeft button:hover{
+    background-color: #495057;
+    color: white;
+}
+
+
+.reportRight{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.salesRight{
+    flex: 2;
+    background-color: white;
+    padding: 18px;
 }
