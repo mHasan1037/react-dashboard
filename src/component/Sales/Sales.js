@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import { Doughnut } from 'react-chartjs-2';
+import { Doughnut, Bar } from 'react-chartjs-2';
+import { Chart } from "react-google-charts";
 import style from './sales.module.css'
-import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io'
+import { IoIosArrowDown } from 'react-icons/io'
 import { AiOutlineWarning, AiOutlineArrowRight, AiOutlineArrowUp } from 'react-icons/ai'
 import Total from './Total'
 import trail from '../../images/trail.png'
+import DataTable from './DataTable';
+import Headline from '../Headline/Headline';
 
 const totalData = [
     {
@@ -69,6 +72,42 @@ const doughnutData = {
     },
   };
 
+  export const data = [
+    ["Country", "Popularity"],
+    ["Germany", 200],
+    ["United States", 300],
+    ["Brazil", 400],
+    ["Canada", 500],
+    ["France", 600],
+    ["RU", 700],
+    ["Bangladesh", 800]
+  ];
+
+
+  const salesAnalysis = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'Income',
+        data: [5000, 7000, 9000, 11000, 8000, 15000, 17000],
+        backgroundColor: 'rgba(255, 99, 132, 0.5)'
+      },
+      {
+        label: 'Expense',
+        data: [7000, 3500, 14500, 5500, 7000, 9000, 12000],
+        backgroundColor: 'rgba(54, 162, 235, 0.5)'
+      }
+    ]
+  };
+  
+  const salesOptions = {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  };
+
 
 const Sales = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -84,13 +123,7 @@ const Sales = () => {
 
   return (
     <div className={style.salesContainer}>
-        <div className={style.salesHeadline}>
-            <h3>Sales</h3>
-            <div className={style.headlineRight}>
-               Dashboards <IoIosArrowForward style={{fontSize: '12px'}}/> Sales
-            </div>
-        </div>
-        
+        <Headline title='Sales' />  
         <section className={style.totalContainer}>
              <Total totalData={totalData} />
         </section>
@@ -186,9 +219,66 @@ const Sales = () => {
                                 )}
                         </div>
                     </div>
-
-                    
+                    <div className={style.salesAnalysisBox}>
+                        <Bar data={salesAnalysis} options={salesOptions} />
+                    </div>    
              </div>
+        </section>
+
+        <section className={style.tableMap}>
+           <div className={style.tableSection}>
+               <DataTable />
+           </div>
+           <div className={style.mapBox}>
+              <Chart
+                chartEvents={[
+                  {
+                    eventName: "select",
+                    callback: ({ chartWrapper }) => {
+                      const chart = chartWrapper.getChart();
+                      const selection = chart.getSelection();
+                      if (selection.length === 0) return;
+                      const region = data[selection[0].row + 1];
+                      console.log("Selected : " + region);
+                    },
+                  },
+                ]}
+                chartType="GeoChart"
+                width="100%"
+                height="400px"
+                data={data}
+              />
+
+              <section className={style.barBoxContainer}>
+                    <div className={style.barBox}>
+                        <div className={style.barHeadline}>
+                              <p>USA</p>
+                              <p>75%</p>
+                        </div>
+                        <div className={style.barBackground}>
+                            <div className={style.barMain} style={{width: '75%'}}></div>
+                        </div>
+                    </div>
+                    <div className={style.barBox}>
+                        <div className={style.barHeadline}>
+                              <p>Russia</p>
+                              <p>55%</p>
+                        </div>
+                        <div className={style.barBackground}>
+                            <div className={style.barMain} style={{width: '55%'}}></div>
+                        </div>
+                    </div>
+                    <div className={style.barBox}>
+                        <div className={style.barHeadline}>
+                              <p>Australia</p>
+                              <p>85%</p>
+                        </div>
+                        <div className={style.barBackground}>
+                            <div className={style.barMain} style={{width: '85%'}}></div>
+                        </div>
+                    </div>       
+              </section>
+           </div>
         </section>
     </div>
   )

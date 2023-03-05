@@ -3,29 +3,9 @@
     padding: 20px;
 }
 
-.salesHeadline{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.salesHeadline h3{
-    font-weight: 300;
-    color: rgb(53, 52, 52);
-}
-
-.headlineRight{
-    display: flex;
-    align-items: center;
-    color: #787a7a;
-    gap: 4px;
-    font-size: 14px;
-}
-
 .totalContainer{
     margin-top: 20px;
 }
-
 
 /*
 Sales section.....
@@ -112,6 +92,10 @@ Sales section.....
     border-radius: 3px;
 }
 
+.btnBox{
+    position: relative;
+}
+
 .mainBtn{
     color: #474e55;
     background-color: transparent;
@@ -125,6 +109,10 @@ Sales section.....
     margin-top: 5px;
     border-radius: 3px;
     z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: white;
 }
 
 .btnOptions button{
@@ -215,3 +203,72 @@ Sales section.....
     background-color: white;
     padding: 18px;
 }
+
+.salesAnalysisBox{
+    width: 100%;
+    height: 400px; 
+    position: relative;
+}
+
+.salesAnalysisBox canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 992px) {
+    .salesSection{
+        flex-direction: column;
+    }
+    .salesAnalysisBox{
+        max-height: 250px;
+    }
+  }
+
+
+  .tableMap{
+     margin-top: 25px;
+     display: flex;
+     gap: 25px;
+     flex-wrap: wrap;
+  }
+
+
+  .tableSection{
+    flex: 2;
+  }
+
+  .mapBox{
+    flex: 1;
+    background-color: white;
+  }
+
+  .barBoxContainer{
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+
+  .barBox{
+    margin: 10px 0;
+  }
+
+  .barHeadline{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .barBackground{
+     width: 100%;
+     background-color: #dcdddf;
+     height: 10px;
+     border-radius: 10px;
+  }
+
+  .barMain{
+    height: 10px;
+    background-color: #0379BB;
+    border-radius: 10px;
+  }
+ 
