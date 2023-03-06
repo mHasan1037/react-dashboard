@@ -2,3 +2,151 @@
     background-color: #F7F8FA;
     padding: 20px;
 }
+
+
+.firstChartBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.firstLeft{
+    flex: 3;
+    background-color: white;
+    border: 1px solid rgb(231, 231, 231);
+    height: fit-content;
+}
+
+.firstHeading{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding: 20px;
+}
+
+.sortBtnBox{
+    position: relative;
+}
+
+.sortBtn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnOptions{
+    position: absolute;
+    top: calc(100% + 3px);
+    border: 1px solid rgb(231, 231, 231);
+}
+
+.btnOptions button{
+    display: block;
+    width: 100px;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: rgb(85, 84, 84);
+}
+
+.btnOptions button:hover{
+    background-color: rgb(241, 241, 241);
+}
+
+
+.firstVisitors{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.totalVisitor{
+    display: flex;
+    align-items: end;
+    gap: 5px;
+}
+
+.totalVisitPer{
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+
+
+.firstVisitorRight{
+    display: flex;
+    align-items: center;
+}
+
+.visitorData{
+    display: flex;
+    align-items: end;
+    gap: 8px;
+    color: gray;
+    padding: 0 20px;
+}
+
+.visitorData h2{
+    font-weight: 300;
+}
+
+.visitorData:nth-child(1) h2{
+    color: #038EDC;
+}
+
+.visitorData:nth-child(2){
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.totalChart{
+    padding: 25px 0;
+}
+
+.firstRight{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+}
+
+.firstTop{
+    padding: 20px;
+    border-bottom: 1px solid rgb(233, 231, 231);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: white;
+}
+
+.firstUserBox{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.firstIcon{
+    background-color: #089bf0;
+    color: white;
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.firstName p:nth-child(1){
+    color:rgb(85, 84, 84);
+    margin-bottom: 4px;
+}
+
+.firstName p:nth-child(2){
+    color:rgb(48, 47, 47);
+}

@@ -9,7 +9,7 @@ import { BsFillChatLeftDotsFill } from 'react-icons/bs'
 import { IoIosArrowDown } from 'react-icons/io'
 import { TfiGallery } from 'react-icons/tfi'
 import NavExpandHook from '../../hooks/NavExpandHook'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
     const [expand, setExpand] = useState(true)
@@ -57,23 +57,23 @@ const Sidebar = () => {
            <div className={style.boards}>
                 <p style={{display: expand ? 'block' : 'none'}}>DASHBOARDS</p>
                 <li>
-                    <Link to="/react-dashboard" className={style.board}>
+                    <NavLink to="/react-dashboard" className={style.board}>
                         <div className={style.boardName}>
                             <FiMonitor className={style.icon}/>
                             <span className={`${expand ? style.visible : style.hide}`}>Sales</span>
                         </div>
                         <span className={style.boardRight} style={{display: expand ? 'block' : 'none'}}>5+</span>
                         <span className={`${style.shrink} ${expand ? '' : style.show}`}>Sales</span>
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link to="/analytics" className={style.board}>
+                    <NavLink to="/analytics" className={style.board}>
                         <div className={style.boardName}>
                             <AiOutlinePieChart className={style.icon}/>
                             <span className={`${expand ? style.visible : style.hide}`}>Analytics</span>      
                         </div>
                         <span className={`${style.shrink} ${expand ? '' : style.show}`}>Analytics</span>
-                    </Link>
+                    </NavLink>
                 </li>
            </div>
            <div className={style.boards}>
