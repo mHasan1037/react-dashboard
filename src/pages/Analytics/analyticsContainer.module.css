@@ -1,6 +1,8 @@
 .analytics{
     background-color: #F7F8FA;
     padding: 20px;
+    height: 90vh;
+    overflow-y: scroll;
 }
 
 
@@ -14,7 +16,7 @@
 .firstLeft{
     flex: 3;
     background-color: white;
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(240, 240, 240);
     height: fit-content;
 }
 
@@ -38,7 +40,7 @@
 .btnOptions{
     position: absolute;
     top: calc(100% + 3px);
-    border: 1px solid rgb(231, 231, 231);
+    border: 1px solid rgb(240, 240, 240);
 }
 
 .btnOptions button{
@@ -62,7 +64,7 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(231, 231, 231);
+    border-bottom: 1px solid rgb(240, 240, 240);
 }
 
 .totalVisitor{
@@ -119,7 +121,7 @@
 
 .firstTop{
     padding: 20px;
-    border-bottom: 1px solid rgb(233, 231, 231);
+    border-bottom: 1px solid rgb(240, 240, 240);
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -149,4 +151,277 @@
 
 .firstName p:nth-child(2){
     color:rgb(48, 47, 47);
+}
+
+
+/*
+......Second chart box
+*/
+
+.secondChartBox{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.secondChartBox > *{
+    width: 23%;
+    min-width: 270px;
+}
+
+.secondFirst{
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.sechealine{
+    color: #495057;
+}
+
+.SecondLineBox{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SecondLineBox:nth-child(2){
+    border-bottom: 1px solid rgb(240, 240, 240);
+    border-top: 1px solid rgb(240, 240, 240);
+}
+
+.secLineNum{
+    display: flex;
+    align-items: end;
+    gap: 7px;
+    margin-top: 8px;
+}
+
+.secondSecond{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.secVisitHead{
+    display: flex;
+    justify-content: space-between;
+}
+
+.secVisitBtns{
+    position: relative;
+}
+
+.secReportBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.secHiddenBtns{
+    position: absolute;
+    width: 140px;
+    background-color: white;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.secHiddenBtns button{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    text-align: start;
+}
+
+.secHiddenBtns button:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.secBrowserBox{
+    margin-top: 20px;
+}
+
+.secBrowser{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 35px 0;
+}
+
+.browserIcon{
+    color: #089bf0;
+    font-size: 22px;
+}
+
+.secBrowserName{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(109, 107, 107);
+}
+
+.secBarBox{
+    width: 200px;
+    margin-top: 10px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    height: 10px;
+}
+
+.barBlue{
+    height: 100%;
+    border-radius: 5px;
+    background-color: #089bf0;
+}
+
+
+
+
+/*daughnut chart*/
+
+.secondThird{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.secondDoughnut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Traffic source*/
+
+.secondForth{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.trafficBox{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.trafficId{
+    background-color: #F5F6F8;
+    color: #038edc;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trafficData{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+
+/*
+Third Chart Box
+*/
+
+.thirdChartBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.thirdVisitor{
+    flex: 2.5;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.channels{
+    flex: 1.5;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.channelsTable{
+    margin-top: 20px;
+}
+
+
+.thirdGeoContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.thirdGoeChart{
+    width: 420px;
+}
+
+.analyticCountryBox{
+    min-width: 300px;
+    padding: 20px;
+}
+
+.analyticDatas{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.flagContainer{
+    background-color: #f0f1f1;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.analyticeFlag{
+    width: 15px;
+}
+
+.analyticInfo{
+    width: 100%;
+}
+
+.analyticCoutryName{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.channelTable{
+    width: 90%;
+    margin: 0 auto;
+    color: rgb(85, 84, 84);
+}
+
+.channelTable tr{
+    padding: 10px 0;
+}
+
+.channelTable tr th{
+    text-align: left;
+    padding: 10px 0;
+}
+
+.channelTable tr td{
+    padding: 10px 0;
 }

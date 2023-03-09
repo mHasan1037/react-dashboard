@@ -79,13 +79,13 @@ const Sidebar = () => {
            <div className={style.boards}>
                 <p style={{display: expand ? 'block' : 'none'}}>APPLICATIONS</p>
                 <li>
-                    <div className={style.board}>
+                    <NavLink to="/calendar" className={style.board}>
                         <div className={style.boardName}>
                             <SlCalender className={style.icon}/>
                             <span className={`${expand ? style.visible : style.hide}`}>Calender</span>
                         </div>
                         <span className={`${style.shrink} ${expand ? '' : style.show}`}>Calender</span>
-                    </div>
+                    </NavLink>
                 </li>
                 <li>
                     <div className={style.board}>

@@ -6,6 +6,7 @@ import Analytics from "./pages/Analytics/Analytics";
 import './app.css'
 import { useState } from "react";
 import NavExpendHook from "./hooks/NavExpandHook";
+import Calendar from "./pages/Calender/Calendar";
 
 function App() {
   const [sidebarSize, setSidebarSize] = useState(250)
@@ -16,6 +17,7 @@ function App() {
           <Routes>
               <Route path="/react-dashboard" element={<Home /> } />
               <Route path="/analytics" element={ <Analytics />} />
+              <Route path="/calendar" element={ <Calendar /> } />
           </Routes>
        </NavExpendHook.Provider>
     </BrowserRouter>
