@@ -261,7 +261,7 @@ const Sales = () => {
                     </div>
                     <div className={style.barBox}>
                         <div className={style.barHeadline}>
-                              <p>Russia</p>
+                              <p>Bangladesh</p>
                               <p>55%</p>
                         </div>
                         <div className={style.barBackground}>

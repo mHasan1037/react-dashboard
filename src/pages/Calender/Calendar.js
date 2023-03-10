@@ -12,6 +12,19 @@ const Calendar = () => {
     const {sidebarSize} = useContext(NavExpandHook)
     const navbarSize = `calc(100vw - ${sidebarSize}px)`
 
+    const events = [
+      {
+        title: 'The Title of the day is the day',
+        start: new Date(new Date().setDate(new Date().getDate() - 2)),
+        start: new Date(new Date().setDate(new Date().getDate() + 2)),
+      }
+    ]
+
+    //calendar event data pass tutorial
+    //https://www.youtube.com/watch?v=lyRP_D0qCfk
+
+    
+
   return (
     <div style={{ display: 'flex', width: '100vw'}}>
         <Sidebar />
@@ -34,7 +47,7 @@ const Calendar = () => {
                        selectMirror={true}
                        weekends={true}
                        nowIndicator={true}
-                       initialEvents={[]}
+                       events={events}
                     />
                 </div>
             </div>
