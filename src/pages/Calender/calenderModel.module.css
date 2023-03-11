@@ -1,0 +1,100 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #495057;
+    font-weight: 500;
+}
+
+.close{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.body{
+    margin-top: 25px;
+}
+
+.eventForm{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.formControl p{
+   color: #495057;
+   margin-bottom: 10px;
+}
+
+input:focus{
+    outline: none;
+    border-color: rgb(136, 226, 46);
+}
+
+.formControl input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.formButton{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formButton button{
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.saveBtn{
+    background-color: #45b377;
+    color: white;
+}
+
+.saveBtn:hover{
+    background-color: #3a9965; 
+}
+
+.closeBtn{
+    background-color: #f5f6f8;
+}
+
+.closeBtn:hover{
+    background-color: #e4e4e6;
+}
+
+
+.reactDatePicker{
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: white !important;
+}
+  
+  .react-datepicker__day-name,
+  .react-datepicker__day {
+    display: inline-block;
+    width: 14.2857%;
+    text-align: center;
+    margin: 0;
+    padding: 8px 0;
+  }
+  
+  .react-datepicker__day {
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .react-datepicker__day--selected {
+    background-color: #0069d9;
+    color: #fff;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    background-color: #0069d9;
+    color: #fff;
+  }
