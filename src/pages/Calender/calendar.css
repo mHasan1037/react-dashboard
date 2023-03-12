@@ -1,5 +1,6 @@
 .calendar-container{
-    margin-top: calc(10% - (-80px));
+    padding-top: calc(5% - (-50px));
+    background-color: #F7F8FA;
 }
 .calendar-container>div{
      margin: auto;

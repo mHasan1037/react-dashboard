@@ -75,26 +75,3 @@ input:focus{
     background-color: white !important;
 }
   
-  .react-datepicker__day-name,
-  .react-datepicker__day {
-    display: inline-block;
-    width: 14.2857%;
-    text-align: center;
-    margin: 0;
-    padding: 8px 0;
-  }
-  
-  .react-datepicker__day {
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  
-  .react-datepicker__day--selected {
-    background-color: #0069d9;
-    color: #fff;
-  }
-  
-  .react-datepicker__day--keyboard-selected {
-    background-color: #0069d9;
-    color: #fff;
-  }

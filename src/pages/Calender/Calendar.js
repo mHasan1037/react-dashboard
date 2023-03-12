@@ -31,34 +31,34 @@ const events = [
     title: 'Conference',
     start: new Date(new Date().setDate(new Date().getDate() - 0)),
     end: new Date(new Date().setDate(new Date().getDate() - 0)),
-  }
-  
+  }  
 ]
 
 const Calendar = () => {
     const {sidebarSize} = useContext(NavExpandHook)
     const navbarSize = `calc(100vw - ${sidebarSize}px)`
 
-    //calendar event data pass tutorial
-    //https://www.youtube.com/watch?v=lyRP_D0qCfk
-
     const [newEvent, setNewEvent] = useState({title: '', start: '', end: ''})
     const [allEvents, setAllEvents] = useState(events)
     const [eventBox, setEventBox] = useState(false)
 
-    function handleAddEvent(){
-      setAllEvents([...allEvents, newEvent])
+    function handleAddEvent(newData){
+      const updateEvents = [...allEvents, newData]
+      setAllEvents(updateEvents)
+      setEventBox(false)
     }
+
+    
 
 
   return (
     <div style={{ display: 'flex', width: '100vw'}}>
-        {eventBox && <CalenderModal setEventBox={setEventBox} eventBox={eventBox} />}
+        {eventBox && <CalenderModal setEventBox={setEventBox} eventBox={eventBox} onEvent={handleAddEvent} />}
         <Sidebar />
         <div style={{width: navbarSize}}>
             <NavBar />
             <div className='calendar-container'>
-                <div>
+                <div style={{backgroundColor: '#ffffff', paddingTop: '30px'}}>
                     <FullCalendar 
                        plugins = {[dayGridPlugin, interactionPlugin, timeGridPlugin]}
                        customButtons={{

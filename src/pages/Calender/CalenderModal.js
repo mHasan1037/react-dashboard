@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from './calenderModel.module.css'
 import { RxCross2 } from 'react-icons/rx'
 import ReactDatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 const styleComponent = {  
     position: 'absolute',
@@ -23,7 +24,7 @@ const styleMainDiv = {
 }
 
 
-const CalenderModal = ({setEventBox, eventBox}) => {
+const CalenderModal = ({setEventBox, eventBox, onEvent}) => {
       const [eventName, setEventName] = useState('')
       const [eventStart, setEventStart] = useState('');
       const [eventEnd, setEventEnd] = useState('');
@@ -31,11 +32,11 @@ const CalenderModal = ({setEventBox, eventBox}) => {
         const handleSave = (e) =>{
             e.preventDefault()
             const eventData = {
-                eventName,
-                eventStart,
-                eventEnd
+                title: eventName,
+                start: eventStart,
+                end: eventEnd
             }
-            console.log(eventData)
+            onEvent(eventData)
             setEventBox(!eventBox)
         }
   return (
@@ -62,9 +63,8 @@ const CalenderModal = ({setEventBox, eventBox}) => {
                                 <ReactDatePicker 
                                     placeholderText='Insert Event Start' 
                                     selected={eventStart}
-                                    style={{width: '100%', backgroundColor: 'white'}}
                                     onChange={(date)=> setEventStart(date)}  
-                                    className={style.reactDatePicker}                                 
+                                    className={style.reactDatePicker}                                
                                 />
                         </div>
                     </div>

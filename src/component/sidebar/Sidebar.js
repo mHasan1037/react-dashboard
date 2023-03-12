@@ -88,14 +88,14 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <div className={style.board}>
+                    <NavLink to="/chat" className={style.board}>
                         <div className={style.boardName}>
                             <BsFillChatLeftDotsFill className={style.icon}/>
                             <span className={`${expand ? style.visible : style.hide}`}>Chat</span>      
                         </div>
                         <span className={style.boardRight} style={{display: expand ? 'block' : 'none'}}>New</span>
                         <span className={`${style.shrink} ${expand ? '' : style.show}`}>Chat</span>
-                    </div>
+                    </NavLink>
                 </li>
                 <li>
                     <div className={style.board}>
