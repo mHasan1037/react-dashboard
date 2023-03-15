@@ -1,0 +1,203 @@
+.header{
+    background-color: #C0E3F6;
+    border-radius: 5px 5px 0 0;
+    padding: 25px 25px 0 25px;
+}
+
+.searchBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.searchBox img{
+    width: 30px;
+}
+
+.sarchIcons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #495057;
+}
+
+.sarchIcons input{
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid #94989b;
+}
+
+.chatOptins{
+    position: relative;
+}
+
+.chatOptins ul{
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(52,58,64,.06);
+}
+
+.chatOptins ul li{
+    min-width: 100px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.chatOptins ul li:hover{
+    color: #73BDEC;
+}
+
+.chatTypes{
+    display: flex;
+    justify-content: center;
+}
+
+.chatTypes div{
+    flex: 1;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    color: #343a40;
+}
+
+.chatTypes div:hover{
+    color: #73BDEC;
+}
+
+.chatTypes div.active{
+    border-bottom: 2px solid #2190d4;
+    background-color: white;
+    color: #73BDEC;
+}
+
+.box{
+    padding: 30px;
+    background-color: white;
+}
+
+.box p{
+    color: #495057;
+    font-size: 16px;
+}
+
+.groupBox{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.groupBox::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.chatBox{
+    margin-top: 20px;
+}
+
+.personBox{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    border: 1px solid rgb(240, 237, 237);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.personBox:hover{
+    background-color: rgba(3,142,220,.075);
+    border: 1px solid  rgba(3,142,220,.075);
+    cursor: pointer;
+}
+
+.person{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imgBox{
+    position: relative;
+}
+
+.profileImgBox{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileText{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #73BDEC;
+    color: white;
+}
+
+.profileImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activeDot{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    top: 70%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.msgSendTime{
+    font-size: 11px;
+    color: #74788d;
+}
+
+/*
+ groups chat starts from here....
+*/
+
+.groupHead{
+    display: flex;
+    justify-content: space-between;
+}
+
+.addNew{
+    color: #73BDEC !important;
+}
+
+.addNew:hover{
+    color: #086da8 !important;
+    cursor: pointer;
+}
+
+
+/*
+Contact chat starts from here....
+*/
+
+.contactBox{
+    margin-bottom: 25px;
+}
+
+.contactName{
+    margin: 10px 0;
+    border: 1px solid rgb(240, 237, 237);
+    border-radius: 5px;
+    padding: 10px;
+}

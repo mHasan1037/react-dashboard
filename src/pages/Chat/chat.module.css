@@ -1,0 +1,33 @@
+.chatContainer{
+    background-color: #F7F8FA;
+    padding: 20px;
+}
+
+.chatMain{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.chatShow{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.chatShow img{
+    width: 100%;
+}
+
+.chatOptions{
+    flex: 1;
+}
+
+.chatBox{
+    flex: 2.5;
+}
