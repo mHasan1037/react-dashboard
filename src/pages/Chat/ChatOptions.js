@@ -5,7 +5,7 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { BsThreeDots } from 'react-icons/bs'
 import {chatData, groups, names} from './ChatDataBase'
 
-const ChatOptions = () => {
+const ChatOptions = ({onIdClick}) => {
     const [search, setSearch] = useState(false)
     const [options, setOptions] = useState(false)
     const [activeButton, setActiveButton] = useState("a");
@@ -40,6 +40,12 @@ const ChatOptions = () => {
       //Contact names rendering
       const sortedNames = names.sort()
       const uniqueFirstLetters = [...new Set(sortedNames.map(name => name.charAt(0)))]
+
+
+      //onclick of the chat box
+      const handlePerson = (id) =>{
+         onIdClick(id)
+      }
 
   return (
     <>
@@ -78,9 +84,9 @@ const ChatOptions = () => {
                 <div className={style.chatBox}>
                     {
                         chatData.map((chat) =>{
-                            const {name, active, lastMsg, time, img} = chat
+                            const {name, active, lastMsg, time, img, id} = chat
                             return(
-                                <div className={style.personBox} key={name}>
+                                <div onClick={()=> handlePerson({name, id})} className={style.personBox} key={id}>
                                     <div className={style.person}>
                                         <div className={style.imgBox}>
                                             {img !== null ?
@@ -113,10 +119,10 @@ const ChatOptions = () => {
                 <div className={style.chatBox}>
                     {
                         groups.map((group)=>{
-                            const {name, member, img} = group
+                            const {name, member, img, id} = group
 
                             return(
-                                <div className={style.personBox}>
+                                <div onClick={()=> handlePerson({name, id})} className={style.personBox} key={id}>
                                     <div className={style.person}>
                                         <div className={style.imgBox}>
                                             {img !== null ?

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import NavBar from '../../component/navBar/NavBar'
 import Sidebar from '../../component/sidebar/Sidebar'
 import NavExpandHook from '../../hooks/NavExpandHook'
@@ -9,8 +9,14 @@ import ChatOptions from './ChatOptions'
 import ChatBox from './ChatBox'
 
 const ChatPage = () => {
+    const [chatId, setChatId] = useState(0)
     const {sidebarSize} = useContext(NavExpandHook)
     const navbarSize = `calc(100vw - ${sidebarSize}px)`
+
+
+    const handlePersonClick = (id) =>{
+        setChatId(id)
+    }
 
     return (
         <div style={{ display: 'flex', width: '100vw'}}>
@@ -24,10 +30,10 @@ const ChatPage = () => {
                             <img src={logo} />
                         </div>
                         <div className={style.chatOptions}>
-                            <ChatOptions />
+                            <ChatOptions onIdClick={handlePersonClick} />
                         </div>
                         <div className={style.chatBox}>
-                            <ChatBox />
+                            <ChatBox chatId={chatId} />
                         </div>
                     </div>
                 </div>
