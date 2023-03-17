@@ -20,7 +20,7 @@ const ChatBox = ({chatId}) => {
      id={group.id} 
      name={group.name} 
      img={group.img} 
-     status={undefined} 
+     status={group.active} 
      />
   }
   

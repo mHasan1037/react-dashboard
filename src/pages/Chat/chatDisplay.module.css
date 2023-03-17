@@ -1,15 +1,19 @@
 .mainContainer{
     width: 100%;
+    height: 100%;
     background-color: white;
     border-radius: 5px;
     border: 1px solid #f1f1f1;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .displayHeading{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #f1f1f1;
 }
 
 .profileBox{
@@ -57,7 +61,7 @@
 .activeStatus{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .activeLight{
@@ -73,4 +77,164 @@
 .headingIcons{
     display: flex;
     gap: 20px;
+}
+
+.headingIconBox{
+    position: relative;
+}
+
+.headSearchBox{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.headSearchBox input{
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #dfdfdf;
+}
+
+.headSearchBox input:focus{
+    outline: none;
+}
+
+.headingOptionsBox{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 5px 0;
+    z-index: 1; 
+}
+
+.headingOptionsBox li{
+    min-width: 130px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #2c3034;
+    cursor: pointer;
+}
+
+.headingOptionsBox li:hover{
+    background-color:#f8f7f7;
+}
+
+
+.msgBox{
+    flex: 1;
+    position: relative;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.msgBox::-webkit-scrollbar {
+    display: none;
+}
+
+.msgWrapper{
+    position: absolute;
+    bottom: 60px;
+}
+
+.msgDisplay{
+   padding: 15px;
+}
+
+.newMsgBox{
+    position: absolute;
+    bottom: 0; 
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #f1f1f1;
+    padding: 10px 15px;
+}
+
+.newMsgBox input{
+    flex: 1;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f5f6f8;
+    border: 1px solid #f5f6f8;
+    color: #495057;
+    height: 37px;
+}
+
+.newMsgBox button{
+    height: 37px;
+    cursor: pointer;
+    border: none;
+    background-color: #038edc;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 10px;
+}
+
+.newMsgBox button:hover{
+    background-color: #047ec5;
+}
+
+.senderBox{
+    display: flex;
+    align-items: start;
+    gap: 3px;
+}
+
+.senderImgBox{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.senderImgBox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.senderImgBox div{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #2190d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.senderDetails{
+    background-color: rgba(3,142,220,.1);
+    padding: 7px 18px;
+    border-radius: 5px;
+    margin-left: 5px;
+    position: relative;
+    min-width: 150px;
+    max-width: 500px;
+}
+
+.senderBoxArrow{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: rgba(3,142,220,.1) transparent transparent transparent;
+    position: absolute;
+    left: -10px;
+    top: 0;
 }

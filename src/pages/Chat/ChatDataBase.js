@@ -71,31 +71,36 @@ const groups = [
         id: 0,
         name: 'General',
         member: '12 Members',
-        img: null
+        img: null,
+        active: true
     },
     {
         id: 1,
         name: 'Reporting',
         member: '22 Members',
-        img: null
+        img: null,
+        active: true
     },
     {
         id: 2,
         name: 'Meeting',
         member: '27 Members',
-        img: null
+        img: null,
+        active: true
     },
     {
         id: 3,
         name: 'Project A',
         member: '10 Members',
-        img: null
+        img: null,
+        active: true
     },
     {
         id: 4,
         name: 'Project B',
         member: '34 Members',
-        img: null
+        img: null,
+        active: true
     }
 ]
 
