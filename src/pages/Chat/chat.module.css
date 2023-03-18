@@ -1,12 +1,15 @@
 .chatContainer{
     background-color: #F7F8FA;
     padding: 20px;
+    height: 90vh;
+    overflow-y: scroll;
 }
 
 .chatMain{
     display: flex;
     margin-top: 30px;
     gap: 10px;
+    position: relative;
 }
 
 .chatShow{
@@ -26,8 +29,29 @@
 
 .chatOptions{
     flex: 1;
+    height: 100%;
 }
 
 .chatBox{
     flex: 2.5;
 }
+
+
+@media screen and (max-width: 600px){
+    .chatMain{
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .chatShow{
+        position: absolute;
+        top: -20px;
+        left: -10px;
+        display: block;
+    }
+
+    .chatOptions{
+        display: none;
+    }
+}
+

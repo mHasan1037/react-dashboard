@@ -106,19 +106,29 @@ const ChatDisplay = ({id, name, img, status, lastMsg}) => {
                             }
                          </div>
                          <div className={style.senderDetails}>
-                            <p>{name}</p>
+                            <p className={style.senderName}>{name}</p>
                             <p>{lastMsg}</p>
                             <div className={style.senderBoxArrow}></div>
                          </div>
-                         <BiDotsVerticalRounded />
+                         <BiDotsVerticalRounded className={style.senderOptionIcon} />
                     </div>
-                {
-                    messages.map((msg, idx)=>(
-                        <div key={idx} className={style.msg}>
-                            {msg}
-                        </div>
-                    ))
-                }
+                    <div className={style.MyMsgBox}>
+                    {
+                        messages.map((msg, idx)=>(
+                            <div key={idx} className={style.myMsgs}>
+                                <BiDotsVerticalRounded className={style.senderOptionIcon} />
+                                <div className={style.receiverDetails}>
+                                    <p className={style.senderName}>Me</p>
+                                    <p>{msg}</p>
+                                    <div className={style.receiverBoxArrow}></div>
+                                </div>
+                                <div className={style.senderImgBox}>
+                                     <div>M</div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                    </div>
                 </div>
             </div>
             <form className={style.newMsgBox} onSubmit={handleFormSubmit} >

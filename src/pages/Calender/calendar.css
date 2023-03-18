@@ -1,6 +1,8 @@
 .calendar-container{
     padding-top: calc(5% - (-50px));
     background-color: #F7F8FA;
+    height: 90vh;
+    overflow-y: scroll;
 }
 .calendar-container>div{
      margin: auto;
