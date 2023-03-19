@@ -19,6 +19,10 @@ const ChatDisplay = ({id, name, img, status, lastMsg}) => {
         }
     }
 
+    useEffect(() => {
+        setMessages([]);
+    }, [id]);
+
     useEffect(()=>{
         const handleOutsideClick = (event) => {
             if (showSearch && !event.target.closest(`.${style.headingIconBox}`)) {

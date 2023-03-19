@@ -98,13 +98,13 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <div className={style.board}>
+                    <NavLink to="/fileManager" className={style.board}>
                         <div className={style.boardName}>
                             <AiOutlineFolder className={style.icon}/>
                             <span className={`${expand ? style.visible : style.hide}`}>File Manager</span>
                         </div>
                         <span className={`${style.shrink} ${expand ? '' : style.show}`}>File Manager</span>
-                    </div>
+                    </NavLink>
                 </li>
                 <li className={style.boardBox} onClick={()=> setShowEmail(!showEmail)}>
                     <div className={style.board}>

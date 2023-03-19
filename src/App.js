@@ -8,6 +8,7 @@ import { useState } from "react";
 import NavExpendHook from "./hooks/NavExpandHook";
 import Calendar from "./pages/Calender/Calendar"; 
 import ChatPage from "./pages/Chat/ChatPage";
+import FileManager from "./pages/FileManager/FileManager";
 
 function App() {
   const [sidebarSize, setSidebarSize] = useState(250)
@@ -20,6 +21,7 @@ function App() {
               <Route path="/analytics" element={ <Analytics />} />
               <Route path="/calendar" element={ <Calendar /> } />
               <Route path="/chat" element={ <ChatPage /> } />
+              <Route path="/fileManager" element={ <FileManager /> } />
           </Routes>
        </NavExpendHook.Provider>
     </BrowserRouter>

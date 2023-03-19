@@ -9,6 +9,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import ReactDatePicker from 'react-datepicker'
 import './calendar.css'
 import CalenderModal from './CalenderModal'
+import Headline from '../../component/Headline/Headline'
 
 
 const events = [

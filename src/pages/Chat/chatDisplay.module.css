@@ -320,6 +320,10 @@
         height: 20px;
     }
 
+    .senderImgBox div{
+        font-size: 10px;
+    }
+
     .senderName{
         font-size: 14px;
     }

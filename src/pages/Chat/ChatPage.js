@@ -14,11 +14,18 @@ const ChatPage = () => {
     const [chatId, setChatId] = useState(0)
     const {sidebarSize} = useContext(NavExpandHook)
     const navbarSize = `calc(100vw - ${sidebarSize}px)`
+    const [showChatOptions, setShowChatOptions] = useState(false);
 
     const handlePersonClick = (id) =>{
         setChatId(id)  
+        setShowChatOptions(false)
     }
 
+    const handleChatOptions = () =>{
+        setShowChatOptions(!showChatOptions);
+    }
+
+    const chatOptionsClass = showChatOptions ? style.showChatOptions : style.chatOptions;
 
     return (
         <div style={{ display: 'flex', width: '100vw'}}>
@@ -29,11 +36,18 @@ const ChatPage = () => {
                     <Headline title='Chat' />
                     <div className={style.chatMain}>
                         <div className={style.chatShow}>
-                            <img src={logo} />
+                            <img src={logo} onClick={handleChatOptions}/>
                         </div>
+                        {window.innerWidth < 600 && (
+                            <div className={chatOptionsClass}>
+                                <ChatOptions onIdClick={handlePersonClick} />
+                            </div>
+                        )}
+                        {window.innerWidth >= 600 && (
                         <div className={style.chatOptions} >
                             <ChatOptions onIdClick={handlePersonClick} />
                         </div>
+                        )}
                         <div className={style.chatBox}>
                             <ChatBox chatId={chatId} />
                         </div>

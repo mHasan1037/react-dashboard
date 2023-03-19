@@ -1,0 +1,6 @@
+.fileContainer{
+    background-color: #F7F8FA;
+    padding: 20px;
+    height: 90vh;
+    overflow-y: scroll
+}

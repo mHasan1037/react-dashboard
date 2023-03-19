@@ -30,6 +30,7 @@
 .chatOptions{
     flex: 1;
     height: 100%;
+    display: block;
 }
 
 .chatBox{
@@ -52,6 +53,13 @@
 
     .chatOptions{
         display: none;
+    }
+
+    .showChatOptions{
+        display: block;
+        position: absolute;
+        z-index: 2;
+        width: 100%;
     }
 }
 
