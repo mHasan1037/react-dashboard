@@ -1,5 +1,3 @@
-//https://dashonic-v-light.react.pichforest.com/sales
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Analytics from "./pages/Analytics/Analytics";

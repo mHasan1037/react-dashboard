@@ -4,3 +4,241 @@
     height: 90vh;
     overflow-y: scroll
 }
+
+.fileWrapper{
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* column widths */
+    grid-template-rows: auto;
+    grid-template-areas: 
+         "f s s t"
+         "f s s t"
+      ;
+    grid-gap: 20px;
+}
+
+.leftContainer{
+    grid-area: f;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    border: 1px solid #e4e7eb;
+}
+
+
+.mainFile{
+    width: 100%;
+    margin: 18px 0;
+    padding: 0 15px;
+}
+
+.fileHeading{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.fileName{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #4c535a;
+    cursor: pointer;
+}
+
+.fileContents{
+    padding-left: 20px;
+    width: 100%;
+    margin: 3px 0;
+}
+
+.fileContents div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7px 0;
+    color: #7a8186;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.leftBottom{
+    background-color: #dff6fd;
+    border: 1px solid #cff1fb;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.leftBottomTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.centerContainer{
+    grid-area: s;
+    padding: 20px;
+    border: 1px solid #e4e7eb;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.centerHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.centerSearchBox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #F5F6F8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.centerSearchBox input {
+    background-color: #F5F6F8;
+    border: none;
+}
+
+.centerButtonBox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.centerCreateBtn{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #0477b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.centerCreateBtn:hover{
+    background-color: #066ca3;
+}
+
+
+.centerShareOptions{
+    position: relative;
+}
+
+.centerShareBtns{
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 150px;
+    background-color: white;
+    padding: 5px 0;
+    border: 1px solid #e4e7eb;
+    border-radius: 5px;
+}
+
+.centerShareBtns button{
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+
+.centerShareBtns button:hover{
+    background-color: rgb(245, 245, 245);
+}
+
+.centerStoreContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.centerDriveBox{
+    border: 1px solid #edeef0;
+    min-width: 180px;
+    flex: 1;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.centerDriveTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.centerDriveIcon{
+    font-size: 20px;
+}
+
+.CenterBarContainer{
+    background-color: #f5f6f8;
+    width: 100%;
+    height: 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.centerBarBg{
+    height: 6px; 
+    background-color: #038edc; 
+    border-radius: 5px; 
+    position: relative;
+}
+
+.centerBarDot{
+    position: absolute; 
+    right: 2px; 
+    width: 5px; 
+    height: 5px; 
+    border-radius: 50%;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rightContainer{
+    grid-area: t;
+}
+
+
+@media screen and (max-width: 900px){
+    .fileWrapper{
+        grid-template-areas: 
+        "f f t t"
+        "s s s s"
+       ; 
+    }
+}
+
+@media screen and (max-width: 600px){
+    .fileWrapper{
+        grid-template-areas: 
+        "f f f f"
+        "s s s s"
+        "t t t t"
+       ; 
+    }
+}
