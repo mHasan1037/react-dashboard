@@ -89,6 +89,7 @@
     border: 1px solid #e4e7eb;
     border-radius: 5px;
     background-color: white;
+    min-width: 250px;
 }
 
 .centerHeading{
@@ -219,12 +220,69 @@
     transform: translateY(-50%);
 }
 
+.folderHeading{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #e4e7eb;
+    color: #7a8186;
+}
+
+.folderHeading div:nth-child(2){
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.folderHeading div:nth-child(2):hover{
+    color: rgb(54, 54, 54);
+}
+
+.centerFileSize{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 10px;
+    color: #7a8186;
+}
+
+.recentTable{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.recentTable td, th{
+    padding: 10px 0;
+    border-bottom: 1px solid #e4e7eb;
+    color: rgb(54, 54, 54);
+}
+
 .rightContainer{
     grid-area: t;
+    border: 1px solid #e4e7eb;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+
+.rightBox{
+    border: 1px solid #e4e7eb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rightDetails{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1050px){
     .fileWrapper{
         grid-template-areas: 
         "f f t t"
@@ -237,8 +295,8 @@
     .fileWrapper{
         grid-template-areas: 
         "f f f f"
-        "s s s s"
         "t t t t"
+        "s s s s"
        ; 
     }
 }

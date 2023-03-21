@@ -136,13 +136,13 @@ const Sidebar = () => {
                     </ul>
                 </li>
                 <li>
-                    <div className={style.board}>
+                    <NavLink to="/gallery" className={style.board}>
                         <div className={style.boardName}>
                             <TfiGallery className={style.icon}/>
                             <span className={`${expand ? style.visible : style.hide}`}>Gallery</span>
                         </div>
                         <span className={`${style.shrink} ${expand ? '' : style.show}`}>Gallery</span>
-                    </div>
+                    </NavLink>
                 </li>
            </div>
         </ul>

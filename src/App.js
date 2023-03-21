@@ -7,6 +7,7 @@ import NavExpendHook from "./hooks/NavExpandHook";
 import Calendar from "./pages/Calender/Calendar"; 
 import ChatPage from "./pages/Chat/ChatPage";
 import FileManager from "./pages/FileManager/FileManager";
+import Gallery from "./pages/Gallery/Gallery";
 
 function App() {
   const [sidebarSize, setSidebarSize] = useState(250)
@@ -20,6 +21,7 @@ function App() {
               <Route path="/calendar" element={ <Calendar /> } />
               <Route path="/chat" element={ <ChatPage /> } />
               <Route path="/fileManager" element={ <FileManager /> } />
+              <Route path="/gallery" element={ <Gallery /> } />
           </Routes>
        </NavExpendHook.Provider>
     </BrowserRouter>
