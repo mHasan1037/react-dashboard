@@ -3,4 +3,187 @@
     padding: 20px;
     height: 90vh;
     overflow-y: scroll;
+    position: relative;
+}
+
+.galleryMain{
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #e4e7eb;
+}
+
+.galleryHeading{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+    border-bottom: 1px solid #e4e7eb;
+}
+
+.btnBox{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btnBox button{
+    border: none;
+    margin: 10px;
+    width: 110px;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: rgb(88, 189, 254);
+    color: white;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.btnBox button:hover::after{
+    content: '';
+    position: absolute;
+    background-color: #026ba8;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 180%;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+    animation: floating 0.2s linear;
+    transition: 0.1s ease-in;
+}
+
+@keyframes floating{
+    0%{
+        height: 0;
+    }25%{
+        height: 45%;
+    }50%{
+        height: 90%;
+    }75%{
+        height: 135%;
+    }100%{
+        height: 180%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .btnBox button{
+        margin: 5px;
+        width: 70px;
+        padding: 6px;
+        font-size: 10px;
+    }
+}
+
+
+.galleryBoard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 10px;
+    padding: 0 20px;
+}
+
+.galleryBox{
+    flex-basis: calc(33.33% - 10px);
+    border: 1px solid #e4e7eb;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 992px){
+    .galleryBox {
+        flex-basis: calc(50% - 10px); 
+    }
+}
+
+@media screen and (max-width: 600px){
+    .galleryBox {
+        flex-basis: 100%; 
+    }
+}
+
+.galleryImg{
+    width: 100%;
+    height: 220px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    transition: 0.2s ease-in;
+}
+
+.galleryBox:hover .galleryImg{
+    height: 190px;
+}
+
+.galleryImg img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+    transition: 0.2s ease-in;
+}
+
+.galleryBox:hover .galleryImg img{
+    transform: scale(1.1);
+}
+
+.galleryDes{
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    padding: 10px 0;
+}
+
+.galleryBox:hover .galleryDes{
+    overflow: visible;
+}
+
+.galleryDes h3{
+    margin: 5px 0 10px 0;
+    color: rgb(88, 189, 254);
+}
+
+
+.fullScreen{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130vh;
+    background-color: rgb(7, 7, 7, 0.9);
+    z-index: 20;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fullSecScreen{
+    width: 90%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.fullScreenCross{
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.imgBox{
+    margin: 0 auto;
+    background-color: wheat;
+    width:90%;
+    height: 60%;
+}
+
+.imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -11,7 +11,6 @@ import { BiRightArrowAlt, BiDotsVerticalRounded } from 'react-icons/bi'
 import { HiOutlineDotsHorizontal } from 'react-icons/hi'
 import { drives, folders, recentFile, storage } from './FileDataBase'
 import { Chart } from "react-google-charts";
-//https://dashonic-v-light.react.pichforest.com/sales
 
 export const data = [
     ["day", "a", "b", "c", "d"],
@@ -64,7 +63,7 @@ const FileMain = () => {
                                 <FcOpenedFolder />
                                 Files
                             </div>
-                               {showFiles ? <IoIosArrowDown style={{fontSize: '12px'}} /> : <IoIosArrowUp style={{fontSize: '12px'}} />}
+                               {showFiles ? <IoIosArrowUp style={{fontSize: '12px'}} /> : <IoIosArrowDown style={{fontSize: '12px'}} />}
                             </div>
                         {
                             showFiles && (
