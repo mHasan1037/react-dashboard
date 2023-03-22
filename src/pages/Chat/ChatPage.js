@@ -7,6 +7,7 @@ import style from './chat.module.css'
 import logo from '../../images/logo.png'
 import ChatOptions from './ChatOptions'
 import ChatBox from './ChatBox'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 
 
@@ -36,7 +37,7 @@ const ChatPage = () => {
                     <Headline title='Chat' />
                     <div className={style.chatMain}>
                         <div className={style.chatShow}>
-                            <img src={logo} onClick={handleChatOptions}/>
+                            <GiHamburgerMenu onClick={handleChatOptions}/>
                         </div>
                         {window.innerWidth < 600 && (
                             <div className={chatOptionsClass}>
